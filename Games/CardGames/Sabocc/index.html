@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sabocc</title>
+        <link rel="stylesheet" href="stylle.css">
+        <script src="game.js"></script>
+    </head>
+
+    <body>
+        <div class="row">
+            <div class="column">
+                <h2>Dealer: <span id="dealer-sum"></span></h2>
+                <div id="dealer-cards">
+                </div>
+                <h3>Discard Pile: </h3>
+                <div id ="discard-pile">
+                    <img id="discard-cards" src="./cards/BACK.png">
+                </div>
+                <h2>You: <span id="your-sum"></span></h2>
+                <div id="your-cards"></div>
+                <br>
+                <button id="gain">Draw 1 Card ($1)</button>
+                <button id="swap">Take from Discard ($2)</button>
+                <button id="throw">Discard (Free)</button>
+                <button id="stay">Stay/End Turn</button>
+            </div>
+            <div class="column">
+                <h2>Dealer Credits: $<span id="dealer-credits"></span>&emsp;Your Credits: $<span id="your-credits"></span></h2>
+                <br>
+                <h2>House Pot: $<span id="house-credits"></span>&emsp;Zero Pot: $ <span id="zero-pot"></span></h2>
+                <br>
+                <h2 id="results"></h2>
+                <button id="refresh">New Game</button>
+                <h2>Turn: <span id="turn-num"></span>/3</h2>
+                <br>
+                <button id="refreshScore">Refresh Score</button>
+                <br>
+                <button id = "help">Help</button>
+            </div>
+        </div>
+    </body>
+</html>
