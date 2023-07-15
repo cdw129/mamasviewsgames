@@ -118,7 +118,7 @@ function startGame() {
     document.getElementById("help").style.visibility="visible";
 
     document.getElementById("dealer-cards").style.visibility=`visible`;
-    document.getElementById("dealer-cards").src = "./cards/BACK.png";
+    document.getElementById("dealer-cards").src = "./Cards/BACK.png";
 
     document.getElementById("refresh").style.visibility=`hidden`;
 
@@ -143,7 +143,7 @@ function startGame() {
                 dealerSum += getValue(card, 2);
                 dealerhand.push(card);
                 let cardImg = document.createElement("img");
-                cardImg.src = "./cards/BACK.png"
+                cardImg.src = "./Cards/BACK.png"
                 document.getElementById("dealer-cards").append(cardImg);
     }
     console.log("Dealers cards: ");
@@ -156,7 +156,7 @@ function startGame() {
     for (let i = 0; i < 2; i++) {
         let cardImg = document.createElement("img");
         let card = deck.pop();
-        cardImg.src = "./cards/" + card + ".png";
+        cardImg.src = "./Cards/" + card + ".png";
         yourSum += getValue(card, 1);
         document.getElementById("your-cards").append(cardImg);
         playerhand.push(card);
@@ -194,7 +194,7 @@ function hit() {
     else {
         let cardImg = document.createElement("img");
         let card = deck.pop();
-        cardImg.src = "./cards/" + card + ".png";
+        cardImg.src = "./Cards/" + card + ".png";
         yourSum += getValue(card, 1);
         playerhand.push(card)
         document.getElementById("your-cards").append(cardImg);
@@ -249,7 +249,7 @@ function throwaway(whoitbe=1){
             console.log("The card you trashed is " + "\n" + card);
             console.log("-----In the discoard deck the cads are:" + "\n" + discarddeck + "\n" + "-----");
 
-            document.getElementById("discard-cards").src = "./cards/" + card + ".png";
+            document.getElementById("discard-cards").src = "./Cards/" + card + ".png";
 
             playerhand.splice(choise-1, 1);
     
@@ -296,19 +296,19 @@ function throwaway(whoitbe=1){
             playerhand.push(card);
 
             let cardImg = document.createElement("img");
-            cardImg.src = "./cards/" + card + ".png";
+            cardImg.src = "./Cards/" + card + ".png";
 
             document.getElementById("your-cards").append(cardImg);
 
             if (discarddeck.length<=1){
 
-                document.getElementById("discard-cards").src = "./cards/BACK.png";
+                document.getElementById("discard-cards").src = "./Cards/BACK.png";
 
                 discarddeck.splice(lengthNum, 1);
             }
             else {
 
-                document.getElementById("discard-cards").src = "./cards/" + nextcard + ".png";
+                document.getElementById("discard-cards").src = "./Cards/" + nextcard + ".png";
 
                 discarddeck.splice(lengthNum, 1);
             }
@@ -342,10 +342,10 @@ function stay() {
     }
 
     /*else if (dealerSum < -5 || dealerSum > 5) {
-        //<img src="./cards/4-C.png">
+        //<img src="./Cards/4-C.png">
         let cardImg = document.createElement("img");
         let card = deck.pop();
-        cardImg.src = "./cards/BACK.png";
+        cardImg.src = "./Cards/BACK.png";
         document.getElementById("dealer-cards").append(cardImg);
         dealerSum += getValue(card, 2);
         dealerhand.push(card);
@@ -372,7 +372,7 @@ function stay() {
             if (dealerhand.length<=2){
                 let cardImg = document.createElement("img");
                 let card = deck.pop();
-                cardImg.src = "./cards/BACK.png";
+                cardImg.src = "./Cards/BACK.png";
                 document.getElementById("dealer-cards").append(cardImg);
                 dealerSum += getValue(card, 2);
                 dealerhand.push(card);
@@ -390,14 +390,14 @@ function stay() {
                     remove.removeChild(remove.firstChild);
                     let cardImg = document.createElement("img");
                     discarddeck.push(card);
-                    document.getElementById("discard-cards").src = "./cards/" + card + ".png";
+                    document.getElementById("discard-cards").src = "./Cards/" + card + ".png";
                     dealerhand.splice(selectcard, 1);
         
              }
         }
         let cardImg = document.createElement("img");
         let card = deck.pop();
-        cardImg.src = "./cards/BACK.png";
+        cardImg.src = "./Cards/BACK.png";
         document.getElementById("dealer-cards").append(cardImg);
         dealerSum += getValue(card, 2);
         dealerhand.push(card);
@@ -424,7 +424,7 @@ function stay() {
             if (dealerhand.length<=2){
                 let cardImg = document.createElement("img");
                 let card = deck.pop();
-                cardImg.src = "./cards/BACK.png";
+                cardImg.src = "./Cards/BACK.png";
                 document.getElementById("dealer-cards").append(cardImg);
                 dealerSum += getValue(card, 2);
                 dealerhand.push(card);
@@ -442,14 +442,14 @@ function stay() {
                     remove.removeChild(remove.firstChild);
                     let cardImg = document.createElement("img");
                     discarddeck.push(card);
-                    document.getElementById("discard-cards").src = "./cards/" + card + ".png";
+                    document.getElementById("discard-cards").src = "./Cards/" + card + ".png";
                     dealerhand.splice(selectcard, 1);
         
              }
         }
         let cardImg = document.createElement("img");
         let card = deck.pop();
-        cardImg.src = "./cards/BACK.png";
+        cardImg.src = "./Cards/BACK.png";
         document.getElementById("dealer-cards").append(cardImg);
         dealerSum += getValue(card, 2);
         dealerhand.push(card);
@@ -482,7 +482,7 @@ function EndofRound(){
     for (let i = 0; i < dealerhand.length; i++){
         let cardImg = document.createElement("img");
         let card = dealerhand[i];
-        cardImg.src = "./cards/" + card + ".png";
+        cardImg.src = "./Cards/" + card + ".png";
         document.getElementById("dealer-cards").append(cardImg);
     }
    
