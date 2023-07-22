@@ -1,4 +1,4 @@
-' <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,13 +7,25 @@
   <script defer src="main.js"></script>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body>
+<body id="body-css">
   <div id="filmstrip-header"></div>
   <h1 id="game-title">Guess the Movie</h1>
   <p id="directHint"></p>
   <div id="answer-key">
     <div id ="SetUpPage"> 
     </div>
+
+    <div id="overlay">
+      <div id="popup">
+        <div class="popupcontrols">
+          <span id="popupclose">X</span>
+        </div>
+        <div id="popupcontent" class="popupcontent">
+          <h1>This is a test</h1>
+        </div>
+      </div>
+    </div>
+
   <div id="game-container">
     <div id="image-container">
       <img id="movie-image" src="" alt="Movie Image">
